@@ -1,11 +1,11 @@
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
 var password = document.querySelector("#password");
-console.log(password)
-//var special = [!@#$%^&*]
-//var number = [1234567890]
-//var upper = [ABCDEFGHIJKLMNOPQRSTUVWXYZ]
-//var lower = [abcdefghijklmnopqrstuvwxyz]
+var special = "!@#$%^&*".split("")
+var number = "1234567890".split("")
+var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
+var lower = "abcdefghijklmnopqrstuvwxyz".split("")
+
 
 
 function generatePassword() {
@@ -16,40 +16,34 @@ function generatePassword() {
   var box2 = window.confirm("Do you want to use numbers?")
   var box3 = window.confirm("Do you want to use UPPER CASE letters?")
   var box4 = window.confirm("Do you want to use lower case letters?")
+  var passwordLength = [box0]
+  var passwordLength = [box0]
 
-  console.log(box0)
-  console.log(box1)
-  console.log(box2)
-  console.log(box3)
-  console.log(box4)
 
-  if ( box0 >=8 , box0 <= 128 ) {
-    console.log(box0)
+  if (box0>7 && box0<129) { 
+    console.log("TRUE")
   }
   else {
-    console.log("not valid")
+    alert("!!YOUR PASSWORD SHOULD BE BETWEEN 8 and 128 characters!!")
   }
-
-  if (box1 === true)
-    console.log("special")
-
-  if (box2 === true)
-    console.log("number")
-
-  if (box3 === true)
-    console.log("upper") 
-
-  if (box4 === true)
-    console.log("lower") 
- 
-  return "Generated password will go here!";
-
-
-  math.random
-
-  for loop for each random character 
   
+  for (var i = 0; i <= passwordLength; i++){
+  var randomNumber = Math.floor(Math.random() * special.length + number.length + upper.length + lower.length);
+
+  password += (randomNumber, randomNumber)
+
+  }
+ 
+  return password += (randomNumber, randomNumber);
+
+
+ 
 }
+
+
+  //for loop for each random character 
+  
+
 
 
 
@@ -65,3 +59,19 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+/*
+  if (box1 === true)
+    console.log("special")
+
+  if (box2 === true)
+    console.log("number")
+
+  if (box3 === true)
+    console.log("upper") 
+
+  if (box4 === true)
+    console.log("lower") 
+*/
