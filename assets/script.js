@@ -35,6 +35,8 @@ function generatePassword() {
   
 
   //picks a random character from the string being used in that function 
+if (box1 === true ) {
+
   function ranSpecial() {
      ranSpecialVar = special[Math.floor(Math.random() * special.length)]
     return ranSpecialVar;
@@ -42,7 +44,10 @@ function generatePassword() {
   }
   ranSpecial();
   console.log(ranSpecialVar);
+} else {
 
+console.log("box1 was false")
+};
 
   function ranNumber() {
     ranNumberVar = number[Math.floor(Math.random() * number.length)]
@@ -69,7 +74,13 @@ function generatePassword() {
   ranLower()
   console.log(ranLowerVar)
 
-//Uses the above random characters and puts them into an array
+
+
+  //Uses the above random characters and puts them into an array
+  function ranSpecial() {
+    ranSpecialVar = special[Math.floor(Math.random() * special.length)]
+   return ranSpecialVar;
+  }
 
 var randomChar = [ranSpecial(), ranNumber(), ranUpper(), ranLower()];
   

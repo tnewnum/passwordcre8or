@@ -21,6 +21,8 @@ and then your password is generated
 
 
 ## Credits
+ @Nick Herman - Thanks for the help man 
+
 https://medium.com/@justynagolawska/how-to-easily-add-screenshots-into-your-readme-file-on-github-d806a01d6ffd
 
 https://www.youtube.com/watch?v=x4HUaiazDes
