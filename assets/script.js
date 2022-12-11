@@ -34,7 +34,7 @@ function generatePassword() {
   };
   
 
-  //picks a random character from the string being used
+  //picks a random character from the string being used in that function 
   function ranSpecial() {
      ranSpecialVar = special[Math.floor(Math.random() * special.length)]
     return ranSpecialVar;
@@ -70,7 +70,7 @@ function generatePassword() {
   console.log(ranLowerVar)
 
 //Uses the above random characters and puts them into an array
-/*
+
 var randomChar = [ranSpecial(), ranNumber(), ranUpper(), ranLower()];
   
 //loops that the above varabile to make password
@@ -80,7 +80,7 @@ var randomChar = [ranSpecial(), ranNumber(), ranUpper(), ranLower()];
    randomPassword = randomPassword + randomPasswordChar;
 
   };
- */
+ 
   return randomPassword;
 
 
