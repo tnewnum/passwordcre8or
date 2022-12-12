@@ -35,7 +35,7 @@ function generatePassword() {
   
 
   //picks a random character from the string being used in that function 
-if (box1 === true ) {
+/*if (box1 === true ) {
 
   function ranSpecial() {
      ranSpecialVar = special[Math.floor(Math.random() * special.length)]
@@ -45,9 +45,19 @@ if (box1 === true ) {
   ranSpecial();
   console.log(ranSpecialVar);
 } else {
-
+var ranSpecialVar = ""
 console.log("box1 was false")
 };
+*/
+
+
+function ranSpecial() {
+  ranSpecialVar = special[Math.floor(Math.random() * special.length)]
+ return ranSpecialVar;
+ 
+}
+ranSpecial();
+console.log(ranSpecialVar);
 
   function ranNumber() {
     ranNumberVar = number[Math.floor(Math.random() * number.length)]
@@ -55,7 +65,7 @@ console.log("box1 was false")
 
   }
   ranNumber()
-  console.log(ranNumberVar)
+  console.log(ranNumberVar);
 
 
   function ranUpper() {
@@ -64,31 +74,29 @@ console.log("box1 was false")
   }
 
   ranUpper()
-  console.log(ranUpperVar)
+  console.log(ranUpperVar);
 
   function ranLower() {
     ranLowerVar = lower[Math.floor(Math.random() * lower.length)]
     return ranLowerVar;
   }
 
-  ranLower()
-  console.log(ranLowerVar)
+  ranLower() 
+  console.log(ranLowerVar);
 
 
 
   //Uses the above random characters and puts them into an array
-  function ranSpecial() {
-    ranSpecialVar = special[Math.floor(Math.random() * special.length)]
-   return ranSpecialVar;
-  }
 
-var randomChar = [ranSpecial(), ranNumber(), ranUpper(), ranLower()];
+var randomCharList = [ranSpecialVar, ranNumberVar, ranUpperVar, ranLowerVar];
+console.log(randomCharList);
   
 //loops that the above varabile to make password
   for (var i = 0; i <= box0; i++){
 
-  var randomPasswordChar = randomChar[Math.floor(Math.random() * randomChar.length)]; 
+  var randomPasswordChar = randomCharList[Math.floor(Math.random() * randomCharList.length)]; 
    randomPassword = randomPassword + randomPasswordChar;
+   console.log(randomPassword);
 
   };
  
