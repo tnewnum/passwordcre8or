@@ -11,8 +11,7 @@ var ranNumberVar ;
 var ranUpperVar ;
 var ranLowerVar ;
 
-
-
+//entire function to generate password
 function generatePassword() {
   console.log("button clicked")
 
@@ -32,10 +31,12 @@ function generatePassword() {
     var box3 = window.confirm("Do you want to use UPPER CASE letters?");
     var box4 = window.confirm("Do you want to use lower case letters?");
   };
-  
+
+  randomPassword = "";
 
   //picks a random character from the string being used in that function 
-/*if (box1 === true ) {
+/*
+if (box1 === true ) {
 
   function ranSpecial() {
      ranSpecialVar = special[Math.floor(Math.random() * special.length)]
@@ -45,25 +46,27 @@ function generatePassword() {
   ranSpecial();
   console.log(ranSpecialVar);
 } else {
+
 var ranSpecialVar = ""
 console.log("box1 was false")
 };
+
 */
 
-
+//functions within the function to pull out the random characters for the password
 function ranSpecial() {
+
   ranSpecialVar = special[Math.floor(Math.random() * special.length)]
- return ranSpecialVar;
- 
-}
-ranSpecial();
-console.log(ranSpecialVar);
+  return ranSpecialVar;
+};
+  ranSpecial();
+  console.log(ranSpecialVar);
+
 
   function ranNumber() {
     ranNumberVar = number[Math.floor(Math.random() * number.length)]
     return ranNumberVar;
-
-  }
+};
   ranNumber()
   console.log(ranNumberVar);
 
@@ -71,47 +74,33 @@ console.log(ranSpecialVar);
   function ranUpper() {
     ranUpperVar = upper[Math.floor(Math.random() * upper.length)]
     return ranUpperVar;
-  }
-
+};
   ranUpper()
   console.log(ranUpperVar);
+
 
   function ranLower() {
     ranLowerVar = lower[Math.floor(Math.random() * lower.length)]
     return ranLowerVar;
-  }
-
+};
   ranLower() 
   console.log(ranLowerVar);
 
 
-
-  //Uses the above random characters and puts them into an array
-
+//Uses the above random characters and puts them into an array
 var randomCharList = [ranSpecialVar, ranNumberVar, ranUpperVar, ranLowerVar];
 console.log(randomCharList);
   
 //loops that the above varabile to make password
-  for (var i = 0; i <= box0; i++){
+  for (var i = 0; i < box0; i++){
 
   var randomPasswordChar = randomCharList[Math.floor(Math.random() * randomCharList.length)]; 
    randomPassword = randomPassword + randomPasswordChar;
    console.log(randomPassword);
-
-  };
- 
-  return randomPassword;
-
-
- 
-};
-
-
-  //for loop for each random character 
+}; 
+  return randomPassword; 
   
-
-
-
+};
 
 
 // Write password to the #password input
@@ -120,24 +109,8 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-
-/*
-  if (box1 === true)
-    console.log("special")
-
-  if (box2 === true)
-    console.log("number")
-
-  if (box3 === true)
-    console.log("upper") 
-
-  if (box4 === true)
-    console.log("lower") 
-*/
