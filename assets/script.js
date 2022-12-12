@@ -10,6 +10,7 @@ var ranSpecialVar ;
 var ranNumberVar ;
 var ranUpperVar ;
 var ranLowerVar ;
+var choosenText = [];
 
 //entire function to generate password
 function generatePassword() {
@@ -21,83 +22,59 @@ function generatePassword() {
 
   if (!box0) {
     alert("Please Enter Password Length");
+    generatePassword();
     
   }else if (box0 <8 || box0 > 128) {
     alert("Please choose a number bewteen 8 and 128");
+    generatePassword();
 
   }else{
     var box1 = window.confirm("Do you want to use special characters?");
     var box2 = window.confirm("Do you want to use numbers?");
     var box3 = window.confirm("Do you want to use UPPER CASE letters?");
     var box4 = window.confirm("Do you want to use lower case letters?");
-  };
+  }
+  if (!box1 && !box2 && !box3 && !box4) {
+    alert("Please select at least one option!")
+    generatePassword();
+  }
 
   randomPassword = "";
 
-  //picks a random character from the string being used in that function 
-/*
-if (box1 === true ) {
+//If statements gto select what arrays we want to choose the password from
+  if (box1) {
 
-  function ranSpecial() {
-     ranSpecialVar = special[Math.floor(Math.random() * special.length)]
-    return ranSpecialVar;
-    
+  choosenText = choosenText.concat(special) 
   }
-  ranSpecial();
-  console.log(ranSpecialVar);
-} else {
 
-var ranSpecialVar = ""
-console.log("box1 was false")
-};
-
-*/
-
-//functions within the function to pull out the random characters for the password
-function ranSpecial() {
-
-  ranSpecialVar = special[Math.floor(Math.random() * special.length)]
-  return ranSpecialVar;
-};
-  ranSpecial();
-  console.log(ranSpecialVar);
-
-
-  function ranNumber() {
-    ranNumberVar = number[Math.floor(Math.random() * number.length)]
-    return ranNumberVar;
-};
-  ranNumber()
-  console.log(ranNumberVar);
-
-
-  function ranUpper() {
-    ranUpperVar = upper[Math.floor(Math.random() * upper.length)]
-    return ranUpperVar;
-};
-  ranUpper()
-  console.log(ranUpperVar);
-
-
-  function ranLower() {
-    ranLowerVar = lower[Math.floor(Math.random() * lower.length)]
-    return ranLowerVar;
-};
-  ranLower() 
-  console.log(ranLowerVar);
-
-
-//Uses the above random characters and puts them into an array
-var randomCharList = [ranSpecialVar, ranNumberVar, ranUpperVar, ranLowerVar];
-console.log(randomCharList);
+  if (box2) {
   
+    choosenText = choosenText.concat(number) 
+  }
+
+  if (box3) {
+  
+    choosenText = choosenText.concat(upper)
+  }
+  
+  if (box4) {
+  
+    choosenText = choosenText.concat(lower)
+  }
+
+    console.log(choosenText)
+
+
+
 //loops that the above varabile to make password
   for (var i = 0; i < box0; i++){
 
-  var randomPasswordChar = randomCharList[Math.floor(Math.random() * randomCharList.length)]; 
+  var randomPasswordChar = choosenText[Math.floor(Math.random() * choosenText.length)]; 
    randomPassword = randomPassword + randomPasswordChar;
    console.log(randomPassword);
 }; 
+
+  choosenText = []
   return randomPassword; 
   
 };
@@ -113,4 +90,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+
 
