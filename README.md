@@ -1,36 +1,47 @@
-# PASSWORDCRE8OR
+# passwordCrea8or
 
-## Description
 
-A website that will help you generate a unique password with Upper Case letters, Lower Case letters, Specieal Charecters, and Numbers. The password can be between 8 and 128 characters long. 
 
-## Table of Contents (Optional)
+## 📘 Description
 
-## Installation
+A website that will help you generate a unique password with Upper Case letters, Lower Case letters, Specieal Charecters, and Numbers. The password can be between 8 and 128 characters long.
 
-No install required 
+## 📑 Table of Contents 
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Credits](#credits)
+
+## 🛠️ Installation 
+
+No install required.
 
 ## Usage
 
 Click on "Generate Password" 
 You will be prompted to answer some questions
-and then your password is generated 
+Then your password is generated 
 
 ![image](https://user-images.githubusercontent.com/117390778/206873739-ac7d6804-e20a-4729-9697-ca2a7323958d.png)
 
+## 🔒 License
 
+This project is covered under : No License at this time.
+## 🤝 Credits
 
-## Credits
- @Nick Herman - Thanks for the help man 
+Nicholas Herman - https://github.com/nwherman1724
 
-https://medium.com/@justynagolawska/how-to-easily-add-screenshots-into-your-readme-file-on-github-d806a01d6ffd
+## ⚡ Test
 
-https://www.youtube.com/watch?v=x4HUaiazDes
+There are no tests at this time.
 
-## License
+## ❓ Questions
 
-No License 
+If you have any questions - use the links below to reach out!
 
+Github Username: @tnewnum
 
+Github webpage: https://github.com/tnewnum
 
-
+Email me with any additional questions: thomas.newnum@gmail.com
